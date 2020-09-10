@@ -1,0 +1,96 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  height: 93vh;
+  overflow: hidden;
+  background: #262628 no-repeat center;
+  background-image: url('../largeBackground.svg');
+  background-position-y: 100%;
+}
+main{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 4rem auto;
+  color: #f2f2f2;
+  section{
+    margin: 0.5rem;
+    p.status{
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+    p.temp{
+      font-size: 3rem;
+    }
+    p.location{
+      font-size: 1.125rem;
+    }
+  }
+  input{
+    position: relative;
+    height: 2rem;
+    width: 4rem;
+    appearance: none;
+    outline: none;
+    background: #363638;
+    border-radius: 1rem;
+
+    transition: 0.5s;
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      background: #666668;
+
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+    &:checked:before{
+      left: 2rem;
+    }
+  }
+  
+  #CFToggleSection{
+    span{
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+    input{
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (max-height: 689px){
+   body{
+     height: 100vh;
+   }
+   main{
+     margin: 0;
+   }
+}
+@media screen and (max-height: 639px){
+  body{
+    background-image: url('../smallBackground.svg');
+  }
+}
+@media screen and (max-height: 525px){
+  body{
+    background-image: none;
+  }
+  main{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  };
+}

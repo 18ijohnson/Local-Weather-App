@@ -1,0 +1,36 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script src="./index.js" async></script>
+  <title>Local Weather</title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <i id="icon" class="fas fa-8x"></i>
+      <p class="status"></p>
+    </section>
+    <section>
+      <p class="temp"></p>
+      <p class="location"></p>
+    </section>
+    <section id="CFToggleSection">
+      <span class="f">F</span>
+      <input type='checkbox' id="CFToggle" class="toggle" onchange="toggleCF()"></input>
+      <span class="c">C</span>
+    </section>
+  </main>
+
+</body>
+
+</html>
