@@ -4,6 +4,7 @@ const statusP = document.querySelector('p.status')
 const locationP = document.querySelector('p.location')
 const tempP = document.querySelector('p.temp')
 const toggle = document.querySelector('#CFToggle')
+const spinner = document.querySelector('#loader')
 
 //Setup temp conversion variables
 let unit = 'f';
@@ -65,6 +66,8 @@ function toggleCF() {
 }
 
 navigator.geolocation.getCurrentPosition((position) => getWeather(position), (err) => {
-  alert('ERROR! Please ensure your browser supports geolocation access and that it is enabled for this site.')
+  icon.className = 'fas fa-exclamation-triangle fa-8x'
+  icon.style = ('color: darkred')
   console.error(err)
+  alert('ERROR! Please ensure your browser supports geolocation access and that it is enabled for this site.')
 })
